@@ -1,6 +1,10 @@
 import React  from 'react';
 import  Menu from './Menu.js';
-import data from './Data.js'
+import data from '../Data.js'
+import Navbar from './navbar'
+import SectionA from './sectionA'
+import SectionB from './SectionB'
+import Footer from './Footer'
 
 
 class App extends React.Component {
@@ -21,13 +25,24 @@ addToOrder(element){
   console.log(element)
   //SelectedItem es el producto seleccionado
   let selectedItem = this.state.menu[element]
-  console.log(selectedItem);
+  const orderS =  this.state.order; 
+  orderS[element] = orderS[element] + 1 || 1
+  this.setState({order: orderS})
 }
+
+
+
 
 
 render() {
   return(
+    <div className="container-fluid">
+    <Navbar/>
+    <SectionA/>
     <Menu menuState={this.state.menu} order={this.state.order} addToOrder={this.addToOrder}></Menu>
+    <SectionB/>
+    <Footer/>
+    </div>
   )
 }
 }

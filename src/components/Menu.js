@@ -22,7 +22,7 @@ export default class Menu extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="menu">
         <h2>Desayuno</h2>
         {Object.keys(this.props.menuState).map(this.paintFood)}
       </div>

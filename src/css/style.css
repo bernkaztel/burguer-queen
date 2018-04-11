@@ -364,6 +364,12 @@ text-align: center;
 margin-top: 2%;
 }
 
+.menu{
+text-align: center;
+display: block;
+margin-left: 3%;
+}
+
 .subtitle{
     font-size: 30px;
 text-align: center;
