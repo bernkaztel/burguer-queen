@@ -1,68 +1,74 @@
 module.exports = {
     sandwich: {
         name: 'Sandwich Súper',
-        image: './sand.jpg',
-        price: 10,
+        image: '../images/sand.jpg',
+        price: 10.00,
         status: 'available'
       },
       jugo: {
         name: 'Jugo de naranja',
-        image: './juive.jpg',
-        price: 5,
+        image: '../images/juive.jpg',
+        price: 5.00,
         status: 'available'
       },
       cafea: {
         name: 'Café americano',
-        image: './ca.jpg',
-        price: 10,
+        image: '../images/ca.jpg',
+        price: 10.00,
         status: 'available'
       },
       cafeb: {
         name: 'Café con leche',
-        image: './descarga.jpg',
-        price: 10,
+        image: '../images/descarga.jpg',
+        price: 10.00,
         status: 'available'
       },
       hamr: {
         name: 'Hamburguesa de res',
-        image: './h4.jpg',
-        price: 10,
+        image: '../images/h4.jpg',
+        price: 10.00,
         status: 'available'
       },
       hamp: {
         name: 'Hamburguesa de pollo',
-        image: './hp.jpg',
-        price: 12,
+        image: '../images/hp.jpg',
+        price: 12.00,
         status: 'available'
       },
       hamv: {
         name: 'Hamburguesa vegana',
-        image: './hv.jpg',
-        price: 11,
+        image: '../images/hv.jpg',
+        price: 11.00,
         status: 'available'
       },
       aros: {
         name: 'Aros de cebolla',
-        image: './onion.jpg',
-        price: 5,
+        image: '../images/onion.jpg',
+        price: 5.00,
         status: 'available'
       },
       papas: {
         name: 'Papas fritas',
-        image: './ff.jpg',
-        price: 5,
+        image: '../images/ff.jpg',
+        price: 5.00,
+        status: 'available'
+      },
+      hot: {
+        name: 'Hot-Dog',
+        image: '../images/hotdogs.jpg',
+        price: 9.00,
         status: 'available'
       },
       agua: {
-        name: 'Vaso de agua',
-        image: './water.jpg',
-        price: 8,
+        name: 'Agua',
+        image: '../images/water.jpg',
+        price: 8.00,
         status: 'available'
       },
       soda: {
-        name: 'Soda de la casa',
-        image: './soda.jpg',
-        price: 10,
+        name: 'Soda',
+        image: '../images/soda.jpg',
+        price: 10.00,
         status: 'available'
       },
 };

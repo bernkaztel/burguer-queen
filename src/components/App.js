@@ -5,7 +5,7 @@ import Navbar from './navbar'
 import SectionA from './sectionA'
 import SectionB from './SectionB'
 import Footer from './Footer'
-
+import Order from './order'
 
 class App extends React.Component {
   constructor() {
@@ -40,6 +40,16 @@ render() {
     <Navbar/>
     <SectionA/>
     <Menu menuState={this.state.menu} order={this.state.order} addToOrder={this.addToOrder}></Menu>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <Order/>
     <SectionB/>
     <Footer/>
     </div>

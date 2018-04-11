@@ -4,6 +4,9 @@ export default class SectionB extends Component {
   render() {
     return (
       <div className="container">
+            <br/>
+            <br/>
+            <br/>
       <div className="grid_12">
       <div className="box">
         <div className="row">

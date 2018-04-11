@@ -2,6 +2,7 @@
 
 html {
     width: 100%;
+
 }
 a[href^="tel:"] {
  color: inherit;
@@ -10,12 +11,14 @@ a[href^="tel:"] {
 
 * {
     -webkit-text-size-adjust: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     position: relative;
     background-color: #adacac;
     color: #969696;
+    font-family: 'Montserrat', sans-serif;
     font: 300 14px/20px 'Open Sans', sans-serif;
 }
 
@@ -32,9 +35,46 @@ body {
 	padding:0
 }
 
-.sf-menu{
+#stuck_container{
     display: inline-block;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 190, 231);
+    color: white;
 }
+
+#navlist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navlist li {
+    float: left;
+}
+
+.textnav {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 22px 16px;
+    text-decoration: none;
+    font-family: 'Gugi', cursive;
+}
+
+
+#navlist li a:hover:not(.active) {
+    background-color: rgba(255, 0, 191, 0.33);
+    color: rgb(255, 0, 170);
+    font-family: 'Gugi', cursive;
+}
+
+
 strong {
     font-weight: 700;
 }
@@ -67,7 +107,6 @@ img {
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     color: #535151;
-    font-family: 'Economica', sans-serif;
 }
 
 h2 {
@@ -336,32 +375,55 @@ header h1 a img {
     padding-top: 49px;
 }
 
-.bn__1 {
-    background-color: #000000 !important;
-}
-
-.bn__2 {
-    background-color: #000000 !important;
-}
 
 .bann_capt {
-    background-color: #000000;
+    background: linear-gradient(rgba(255, 0, 170, 0.727), rgba(255, 0, 170, 0.123));
     color: #fff;
     padding-bottom: 22px;
     text-align: center;
-    font: bold 36px/48px 'Economica', sans-serif;
 }
+.bann_capt2 {
+    color: #fff;
+    padding-bottom: 22px;
+    text-align: center;
+}
+
 
 .bann_title {
     padding: 6px 0 18px;
     width: 194px;
     margin: 0 auto 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+
+}
+
+.card-img{
+    height: 220px;
+}
+.pink-btn{
+    background-color: #ffffff;
+    color: rgb(255, 12, 174);
+    border-style: none;
+    padding: 7px;
+}
+
+.bann_title2 {
+    padding: 6px 0 18px;
+    width: 194px;
+    margin: 0 auto 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;    
+    color: #fe2fa8;
+    font-weight: bold;
 }
 
 .title{
 font-size: 50px;
 text-align: center;
 margin-top: 2%;
+font-family: 'Montserrat', sans-serif;
+color: #fe2fa8;
 }
 
 .menu{
@@ -374,15 +436,20 @@ margin-left: 3%;
     font-size: 30px;
 text-align: center;
 margin-top: 1%;
+font-family: 'Montserrat', sans-serif;
+color: #fe2fa8;
 }
 .bann_capt  a {
     font-size: 20px;
+    color: #fe2fa8;
+    border-bottom: #fe2fa8 solid 3px;
 }
 
 .bann_capt  a:hover {
     color: #fff;
     text-decoration: underline;
 }
+
 
 .block1 .count {
     width: 119px;
@@ -398,6 +465,8 @@ margin-top: 1%;
 .block1 {
     text-align: center;
     padding: 49px 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fe2fa8;
 }
 
 .box {
@@ -428,7 +497,6 @@ margin-top: 1%;
     margin-top: 3px;
     float: right;
     display: block;
-    font: bold 20px/48px 'Economica', sans-serif;
 }
 
 .bq1 a .fa {
@@ -449,6 +517,8 @@ margin-top: 1%;
     font-weight: 600;
     line-height: 20px;
     margin-bottom: 12px;
+    font-family: 'Gugi', cursive;
+    color: #fe2fa8;
 }
 
 .block2 {
@@ -590,8 +660,9 @@ margin-top: 1%;
 }
 
 .gall_block {
-    background-color: #f1f0f1;
+    background: linear-gradient(rgb(255, 173, 228), rgb(252, 141, 215));
     padding: 1px;
+
 }
 
 .gall_bot {
@@ -902,6 +973,8 @@ margin-top: 1%;
 
     .gall_block {
         margin-bottom: 35px;
+        width: 60%;
+        left: 5%;
     }
 
     .img_inner img {
@@ -926,6 +999,9 @@ margin-top: 1%;
         width: auto;
     }
 
+    .card-img{
+        height: 220px;
+    }
 
     header h1 {
         padding-top: 15px;

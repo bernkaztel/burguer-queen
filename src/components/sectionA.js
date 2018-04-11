@@ -71,7 +71,7 @@ export default class sectionA extends Component {
           <div className="grid_4">
             <div className="block1">
               <div className="count">3.</div>
-              Revisa que tu pedido esté bien y haz el checkout.
+              Revisa que tu pedido esté bien, agrega los extras que quieras y haz el checkout.
               <br/>
             </div>
           </div>

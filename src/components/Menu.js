@@ -23,8 +23,10 @@ export default class Menu extends Component {
   render() {
     return (
       <div className="menu">
-        <h2>Desayuno</h2>
+        <h2 className="subtitle">Desayuno</h2>
         {Object.keys(this.props.menuState).map(this.paintFood)}
+        <br/>
+        <br/>
       </div>
     );
   }
