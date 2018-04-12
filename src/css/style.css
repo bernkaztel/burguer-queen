@@ -16,8 +16,7 @@ a[href^="tel:"] {
 
 body {
     position: relative;
-    background-color: #adacac;
-    color: #969696;
+    color: #fe2fa8;
     font-family: 'Montserrat', sans-serif;
     font: 300 14px/20px 'Open Sans', sans-serif;
 }
@@ -377,13 +376,11 @@ header h1 a img {
 
 
 .bann_capt {
-    background: linear-gradient(rgba(255, 0, 170, 0.727), rgba(255, 0, 170, 0.123));
-    color: #fff;
+    border: 3px solid rgb(255, 0, 179);
     padding-bottom: 22px;
     text-align: center;
 }
 .bann_capt2 {
-    color: #fff;
     padding-bottom: 22px;
     text-align: center;
 }
@@ -660,7 +657,6 @@ color: #fe2fa8;
 }
 
 .gall_block {
-    background: linear-gradient(rgb(255, 173, 228), rgb(252, 141, 215));
     padding: 1px;
 
 }
@@ -971,6 +967,16 @@ color: #fe2fa8;
         height: 0;
     }
 
+    .white{
+        background-color: white;
+    }
+
+    .subOrder{
+        font-size: 12px;
+        color:  #fe2fa8 !important;
+        text-align: center;
+    }
+    
     .gall_block {
         margin-bottom: 35px;
         width: 60%;

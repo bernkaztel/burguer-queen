@@ -1,60 +1,71 @@
-import React  from 'react';
-import  Menu from './Menu.js';
-import data from '../Data.js'
-import Navbar from './navbar'
-import SectionA from './sectionA'
-import SectionB from './SectionB'
-import Footer from './Footer'
-import Order from './order'
+import React from "react";
+import Menu from "./Menu.js";
+import data from "../Data.js";
+import Navbar from "./navbar";
+import SectionA from "./sectionA";
+import Footer from "./Footer";
+import Order from "./order";
+import { Switch, Route } from "react-router-dom";
 
 class App extends React.Component {
   constructor() {
-      super();
-      this.addToOrder = this.addToOrder.bind(this);
-      //colocamos el estado inicial
-      this.state = {
+    super();
+    this.addToOrder = this.addToOrder.bind(this);
+    this.deleteOrder = this.deleteOrder.bind(this);
+    //colocamos el estado inicial
+    this.state = {
       order: {},
       menu: data
-  };
-}
+    };
+  }
 
+  //Función para agregar a la orden
+  addToOrder(element) {
+    //Dish es el key del producto
+    const dish = element;
+    //crear copia de la orden previa
+    const AddToOrder = this.state.order;
+    AddToOrder[dish] = AddToOrder[dish] + 1 || 1;
+    this.setState({order : AddToOrder})
+  }
 
-//Función para agregar a la orden
-addToOrder(element){
-  //Element es el key del producto
-  console.log(element)
-  //SelectedItem es el producto seleccionado
-  let selectedItem = this.state.menu[element]
-  const orderS =  this.state.order; 
-  orderS[element] = orderS[element] + 1 || 1
-  this.setState({order: orderS})
-}
+  //Eliminar la orden
+    deleteOrder(element){
+      console.log(element);
 
+    }
 
-
-
-
-render() {
-  return(
-    <div className="container-fluid">
-    <Navbar/>
-    <SectionA/>
-    <Menu menuState={this.state.menu} order={this.state.order} addToOrder={this.addToOrder}></Menu>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <Order/>
-    <SectionB/>
-    <Footer/>
-    </div>
-  )
-}
+  render() {
+    return (
+      <div className="container-fluid">
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={SectionA} />
+          <Route
+            path="/menu"
+            exact
+            component={() => (
+              <Menu
+                menuState={this.state.menu}
+                order={this.state.order}
+                addToOrder={this.addToOrder}
+              />
+            )}
+          />
+          <Route path="/checkout" exact 
+           component={() => (
+            <Order
+              menuState={this.state.menu}
+              order={this.state.order}
+              deleteOrder={this.deleteOrder}
+            />
+          )}
+           />
+        </Switch>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

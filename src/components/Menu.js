@@ -23,10 +23,34 @@ export default class Menu extends Component {
   render() {
     return (
       <div className="menu">
+      <div className="howto">
+            <h2 className="title grid_12">Cómo ordenar en nuestra website</h2>
+          </div>
+          <div className="row">
+          <div className="grid_4">
+            <div className="block1">
+              <div className="count">1.</div>
+              Checa nuestros deliciosos platillos.
+              <br/>
+            </div>
+          </div>
+          <div className="grid_4">
+            <div className="block1">
+              <div className="count">2.</div>
+              ¡Selecciona el que más se te antoje!
+              <br/>
+            </div>
+          </div>
+          <div className="grid_4">
+            <div className="block1">
+              <div className="count">3.</div>
+              Revisa que tu pedido esté bien, agrega los extras que quieras y haz el checkout.
+              <br/>
+            </div>
+          </div>
+          </div>
         <h2 className="subtitle">Desayuno</h2>
         {Object.keys(this.props.menuState).map(this.paintFood)}
-        <br/>
-        <br/>
       </div>
     );
   }
