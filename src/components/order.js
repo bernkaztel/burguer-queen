@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import NewOrder from './NewOrder'
+import { Container, Row } from 'reactstrap';
+import { Table } from 'reactstrap';
 
 export default class order extends Component {
 
@@ -36,24 +38,23 @@ export default class order extends Component {
     console.log(total);
   
     return (
-      <div className="order">
+      <Container>
         <h2 className="subtitle">Revisa tu orden</h2>
-        <div className="row white">
-        <div className="grid_1">
-          </div>
-          <div className="grid_4 subtitle">
-          Producto
-          </div>
-          <div className="grid_4 subtitle">
-          Extras
-          </div>
-          <div className="grid_4 subtitle">
-          Precio
-          </div>
-          </div>
+        <Row>
+        <Table>
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th>Product</th>
+            <th>Extras</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
            { orderIds.map(this.paintOrder)} 
-           <div>
+           </tbody>
+      </Table>
              <h3>{total}</h3>
-           </div>
-           </div>
+           </Row>
+           </Container>
     )}}

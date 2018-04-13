@@ -6,6 +6,8 @@ import SectionA from "./sectionA";
 import Footer from "./Footer";
 import Order from "./order";
 import { Switch, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container} from 'reactstrap';
 
 class App extends React.Component {
   constructor() {
@@ -37,7 +39,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <Container>
         <Navbar />
         <Switch>
           <Route path="/" exact component={SectionA} />
@@ -63,7 +65,7 @@ class App extends React.Component {
            />
         </Switch>
         <Footer />
-      </div>
+        </Container>
     );
   }
 }

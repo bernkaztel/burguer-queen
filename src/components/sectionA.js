@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import { Container, Row, Col } from 'reactstrap';
 
 export default class sectionA extends Component {
   render() {
     return (
-      <section className="content">
-      <div className="container">
-        <div className="row">
-          <div className="grid_4">
+      <Container>
+        <Row>
+          <Col>
             <div className="banner">
               <div className="gall_block">
                 <img src="../images/h1.jpg" alt=""/>
@@ -19,8 +19,8 @@ export default class sectionA extends Component {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="grid_4">
+            </Col>
+            <Col>
             <div className="banner">
               <div className="gall_block">
                 <div className="bann_capt  bn__1">
@@ -33,8 +33,8 @@ export default class sectionA extends Component {
                 <img src="../images/h5.jpg" alt=""/>
               </div>
             </div>
-          </div>
-          <div className="grid_4">
+            </Col>
+            <Col>
             <div className="banner ">
               <div className="gall_block">
                 <img src="../images/h6.jpg" alt=""/>
@@ -48,13 +48,13 @@ export default class sectionA extends Component {
                 </div>
               </div>
             </div>
-          </div>
-          </div>
-          </div>
-          <div className="container">
-      <div className="grid_12">
+            </Col>
+            </Row>
+            <Row>
+            <Col>
       <div className="box">
-        <div className="row">
+      <br/>
+      <br/>
           <div className="grid_5 preffix_1">
             <h2>Welcome</h2>
             <p>Post about this
@@ -78,13 +78,12 @@ export default class sectionA extends Component {
             <a href="" className="btn">more</a>
           </div>
         </div>
-      </div>
-    </div>
-    <div className="grid_12">
+        </Col>
+        </Row>
+        <Row>
+            <Col>
       <h2>Dishes for You to Try</h2>
-    </div>
     <div className="gallery">
-      <div className="grid_4">
         <a href="" className="gall_item">
           <img src="./age1_img4.jpg" alt=""/>
         </a>
@@ -103,8 +102,8 @@ export default class sectionA extends Component {
         <a href="" className="link1">+</a>
         <div className="clear"></div>
       </div>
-    </div>
-    <div className="grid_4">
+            </Col>
+           <Col>
       <h2>Testimonials</h2>
       <blockquote className="bq1">
         <img src="./img7.jpg" alt="" className="img_inner fleft noresize"/>
@@ -115,8 +114,10 @@ export default class sectionA extends Component {
             <span className="fa fa-chevron-right"></span>more testimonials</a>
         </div>
       </blockquote>
-    </div>
-    <div className="grid_4">
+      </Col>
+      </Row>
+      <Row>
+      <Col>
       <h2>What’s new</h2>
       <div className="block2">
         <time datetime="2014-01-01">11
@@ -136,8 +137,8 @@ export default class sectionA extends Component {
           </div>Rehoncus. Aliquam nibh antegestas id dictum a, commodo. Praesenterto faucibus malesuada faucibu
         </div>
       </div>
-    </div>
-    <div className="grid_4">
+      </Col>
+      <Col>
       <h2>Opening Hours</h2>
       <ul className="shed">
         <li>
@@ -147,9 +148,9 @@ export default class sectionA extends Component {
         <li>
           <span>Live Musiс:</span> 8AM - 11AM</li>
       </ul>
-    </div>
-    </div>
-          </section>
+      </Col>
+      </Row>
+      </Container>
     )
   }
 }

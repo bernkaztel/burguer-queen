@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import MenuItems from './ElementMenu.js'
+import React, { Component } from "react";
+import MenuItems from "./ElementMenu.js";
+import { Container, Row, Col } from "reactstrap";
 
 export default class Menu extends Component {
   constructor() {
@@ -15,6 +16,7 @@ export default class Menu extends Component {
         name={food.name}
         price={food.price}
         status={food.status}
+        description={food.description}
         key={key}
         index={key}
       />
@@ -22,37 +24,41 @@ export default class Menu extends Component {
   }
   render() {
     return (
-      <div className="menu">
-      <div className="howto">
-            <h2 className="title grid_12">Cómo ordenar en nuestra website</h2>
-          </div>
-          <div className="row">
-          <div className="grid_4">
+      <Container>
+        <Row>
+        <h4 className="title d-block mx-auto">
+            Cómo ordenar en nuestra website
+          </h4>
+        </Row>
+        <Row>
+          <Col>
             <div className="block1">
               <div className="count">1.</div>
               Checa nuestros deliciosos platillos.
-              <br/>
+              <br />
             </div>
-          </div>
-          <div className="grid_4">
+          </Col>
+          <Col>
             <div className="block1">
               <div className="count">2.</div>
               ¡Selecciona el que más se te antoje!
-              <br/>
+              <br />
             </div>
-          </div>
-          <div className="grid_4">
+          </Col>
+          <Col>
             <div className="block1">
               <div className="count">3.</div>
-              Revisa que tu pedido esté bien, agrega los extras que quieras y haz el checkout.
-              <br/>
+              Revisa que tu pedido esté bien, agrega los extras que quieras y
+              haz el checkout.
+              <br />
             </div>
-          </div>
-          </div>
-        <h2 className="subtitle">Desayuno</h2>
-        {Object.keys(this.props.menuState).map(this.paintFood)}
-      </div>
+          </Col>
+        </Row>
+        <h2 className="subtitle">Menú</h2>
+        <Container>
+          {Object.keys(this.props.menuState).map(this.paintFood)}
+        </Container>
+      </Container>
     );
   }
 }
- 

@@ -3,7 +3,8 @@ module.exports = {
         name: 'Sandwich Súper',
         image: '../images/sand.jpg',
         price: 10.00,
-        status: 'available'
+        status: 'available',
+        description: 'Un delicioso sandwich de jamón.'
       },
       jugo: {
         name: 'Jugo de naranja',
