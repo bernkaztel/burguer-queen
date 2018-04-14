@@ -13,12 +13,14 @@ export default class order extends Component {
     paintOrder(key){
       const getPrice = this.props.menuState[key].price;
       const getNameFood = this.props.menuState[key].name;
-      console.log(key, getPrice, getNameFood);
+       //Este nos está devolviendo cuántos veces pedimos el platillo
+       const count = this.props.order[key];
+       const subtotal = count * getPrice
 
       return (
         //Adjuntar la key a cada uno de nuestos elementos del array recorrido
         <NewOrder key={key}
-        paintPrice={getPrice}
+        paintPrice={subtotal}
         paintName={getNameFood}
         />
 
