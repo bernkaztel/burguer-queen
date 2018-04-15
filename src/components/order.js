@@ -13,18 +13,23 @@ export default class order extends Component {
     paintOrder(key){
       const getPrice = this.props.menuState[key].price;
       const getNameFood = this.props.menuState[key].name;
-      console.log(key, getPrice, getNameFood);
+       //Este nos está devolviendo cuántos veces pedimos el platillo
+       const count = this.props.order[key];
+       const subtotal = count * getPrice
 
       return (
         //Adjuntar la key a cada uno de nuestos elementos del array recorrido
         <NewOrder key={key}
-        paintPrice={getPrice}
+        index={key}
+        paintPrice={subtotal}
         paintName={getNameFood}
+        quantity={count}
+        extras={this.props.extras}
+        checkExtras={this.props.checkExtras}
         />
-
       )
-      
     }
+    
   render() {
     //Este está tomando las key de la orden
     const orderIds = Object.keys(this.props.order);
@@ -33,9 +38,13 @@ export default class order extends Component {
       const dish= this.props.menuState[key];
       //Este nos está devolviendo cuántos veces pedimos el platillo
       const count = this.props.order[key];
-       return prevTotal + (count * dish.price)
+      if(key === 'h1mr' || key === 'h2mp' || key === 'h3mv' ){ 
+        const newExtras = this.props.extras[key]
+        return prevTotal + newExtras + (count * dish.price) 
+      }
+       return prevTotal  + (count * dish.price) 
     }, 0)
-    console.log(total);
+
   
     return (
       <Container>
@@ -44,17 +53,22 @@ export default class order extends Component {
         <Table>
         <thead>
           <tr>
-            <th>Quantity</th>
-            <th>Product</th>
+            <th>Cantidad</th>
+            <th>Producto</th>
             <th>Extras</th>
-            <th>Price</th>
+            <th>Precio</th>
           </tr>
         </thead>
         <tbody>
            { orderIds.map(this.paintOrder)} 
+           <tr>
+            <th></th>
+            <th></th>
+            <th>Precio total:</th>
+            <th className="bigger-font">{total}</th>
+          </tr>
            </tbody>
       </Table>
-             <h3>{total}</h3>
            </Row>
            </Container>
     )}}
