@@ -464,6 +464,22 @@ color: #fe2fa8;
     height: 250px;
 }
 
+.bigger-font{
+    font-size: 25px;
+}
+
+.sm-btn{
+   background-color: #fe2fa8;
+   color: white;
+   height: 20px;
+   width: 140px;
+   padding-left: 10px;
+    padding-top: 1px;
+   font-size: 12px;
+   margin-top: 2.5px;
+   margin-bottom: 2.5px;
+}
+
 .border-pnk{
     margin: 2px solid #fe2fa8;
 
