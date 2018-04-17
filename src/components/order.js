@@ -16,6 +16,7 @@ export default class order extends Component {
        //Este nos está devolviendo cuántos veces pedimos el platillo
        const count = this.props.order[key];
        const subtotal = count * getPrice
+       const quantity = this.props.order[key];
 
       return (
         //Adjuntar la key a cada uno de nuestos elementos del array recorrido
@@ -23,7 +24,7 @@ export default class order extends Component {
         index={key}
         paintPrice={subtotal}
         paintName={getNameFood}
-        quantity={count}
+        quantity={quantity}
         extras={this.props.extras}
         checkExtras={this.props.checkExtras}
         />

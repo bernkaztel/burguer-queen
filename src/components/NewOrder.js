@@ -8,7 +8,7 @@ export default class NewOrder extends Component {
     if(this.props.index === 'h1mr' || this.props.index === 'h2mp' ||this.props.index === 'h3mv'){
       return (
         <tr>
-        <th scope="row">2 {/*Aquí va a cantidad de productos*/}</th>
+        <th scope="row">{this.props.quantity}  {/*Aquí va a cantidad de productos*/}</th>
         <td> {this.props.paintName}</td>
         <td>
         <Row>
@@ -29,7 +29,7 @@ export default class NewOrder extends Component {
     return (
       <tr>
         
-      <th scope="row">2      {/*Aquí va a cantidad de productos*/} </th>
+      <th scope="row">{this.props.quantity}     {/*Aquí va a cantidad de productos*/} </th>
       <td> {this.props.paintName}</td>
       <td></td>
       <td>$ {this.props.paintPrice}</td>
