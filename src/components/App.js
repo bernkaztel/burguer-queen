@@ -13,7 +13,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.addToOrder = this.addToOrder.bind(this);
-    this.deleteOrder = this.deleteOrder.bind(this);
+    this.removeFromOrder = this.removeFromOrder.bind(this);
     this.checkExtras = this.checkExtras.bind(this);
     //colocamos el estado inicial
     this.state = {
@@ -39,9 +39,11 @@ class App extends React.Component {
   }
 
   //Eliminar la orden
-  deleteOrder(element) {
-    console.log(element);
-  }
+  removeFromOrder(key) {
+     const order = this.state.order ;
+     delete order[key];
+     this.setState({ order });
+ }
   //Añadir extras
   checkExtras(extrasamount, index) {
     console.log(extrasamount, index);
@@ -75,7 +77,7 @@ class App extends React.Component {
               <Order
                 menuState={this.state.menu}
                 order={this.state.order}
-                deleteOrder={this.deleteOrder}
+                removeFromOrder={this.removeFromOrder}
                 extras={this.state.extras}
                 checkExtras={this.checkExtras}
               />

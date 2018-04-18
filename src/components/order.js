@@ -23,6 +23,7 @@ export default class order extends Component {
         <NewOrder key={key}
         index={key}
         paintPrice={subtotal}
+        removeFromOrder={this.props.removeFromOrder}
         paintName={getNameFood}
         quantity={quantity}
         extras={this.props.extras}
