@@ -21,7 +21,7 @@ export default class NewOrder extends Component {
         <Button className="sm-btn" block onClick={() => this.props.checkExtras(this.props.quantity*1, this.props.index)}>Agregar huevo  + $<span>{this.props.quantity *1}</span></Button>
         </Row>
           </td>
-        <td className="final-price" >$ {this.props.paintPrice + this.props.extras[this.props.index]}</td>
+        <td className="final-price" >$ {this.props.paintPrice + this.props.extras[this.props.index]} <button onClick={()=> this.props.removeFromOrder(this.props.index)}>&times;</button></td>
         </tr>
       )
     }
@@ -32,7 +32,7 @@ export default class NewOrder extends Component {
       <th scope="row">{this.props.quantity}     {/*Aquí va a cantidad de productos*/} </th>
       <td> {this.props.paintName}</td>
       <td></td>
-      <td>$ {this.props.paintPrice}</td>
+      <td>$ {this.props.paintPrice} <button onClick={()=> this.props.removeFromOrder(this.props.index)}>&times;</button></td>
       </tr>
     )
   }
